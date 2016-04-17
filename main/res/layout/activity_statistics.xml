@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#c09f48"
+    tools:context="com.example.chiakiiwamoto.countme.StatisticsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--call custom title bar -->
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar"
+            ></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            >
+            <!--page title-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Statistics"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textColor="#ffffff"
+                android:id="@+id/pageTitle_statistics"
+                />
+
+            <!--coffee type-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Flat white | 1 sugar"
+                android:textColor="#28200b"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:id="@+id/chosenCoffee_text_statistics"
+                />
+
+            <!--coffee-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/type_fw"
+                    android:maxHeight="200dp"
+                    android:minWidth="100dp"
+                    android:id="@+id/chosenCoffee_img_statistics"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="38sp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:onClick="tapToReset"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/cup_total_statistics"
+                    android:background="@drawable/round_btn"
+                    android:minWidth="90dp"
+                    android:minHeight="90dp"
+                    android:allowUndo="false"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cups"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#ffffff"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="145dp"
+                    />
+
+            </RelativeLayout>
+
+            <!--show total-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:minHeight="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                >
+
+                <!--caffeine-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="150dp"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center"
+                        android:minHeight="35dp"
+                        android:minWidth="35dp"
+                        android:src="@drawable/home_caffeine"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#ffffff"
+                        android:layout_marginTop="5dp"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:id="@+id/caffeine_total"
+                        />
+
+                </LinearLayout>
+
+                <!--divider-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:minWidth="25dp"
+                    android:src="@drawable/home_line"
+                    />
+
+                <!--sugar-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="150dp"
+                    android:minHeight="70dp"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="false"
+                        android:layout_gravity="center"
+                        android:minHeight="35dp"
+                        android:minWidth="35dp"
+                        android:src="@drawable/home_sugar"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#ffffff"
+                        android:layout_marginTop="5dp"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:id="@+id/sugar_total"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--call bottom nav bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:id="@+id/nav_bar"
+            layout="@layout/nav_bar"
+            ></include>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#38311e"
+    android:layout_gravity="bottom"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <!--home-->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_home"
+            android:minWidth="80dp"
+            android:minHeight="60dp"
+            android:background="#00ffffff"
+            android:id="@+id/nav_home"
+            android:onClick="goHome"/>
+
+        <!--statistics-->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_statistics"
+            android:minWidth="80dp"
+            android:minHeight="60dp"
+            android:layout_gravity="center"
+            android:background="#00ffffff"
+            android:id="@+id/nav_statistics"
+            android:onClick="goStatistics"/>
+
+        <!--settings-->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_settings"
+            android:minWidth="80dp"
+            android:minHeight="60dp"
+            android:layout_gravity="center"
+            android:background="#00ffffff"
+            android:id="@+id/nav_settings"
+            android:onClick="goSettings"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Developed by Chi"
+            android:layout_gravity="bottom|center"
+            android:textColor="#88ffffff"
+            android:textSize="10sp"
+            android:id="@+id/credit_page_btn"
+            />
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+        <!--link to developer creditpage-->
+
+
+</android.support.v7.widget.Toolbar>
